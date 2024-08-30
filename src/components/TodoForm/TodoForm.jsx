@@ -1,37 +1,35 @@
-import React, { useState }from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const TodoForm = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const [item, setItem] = useState('')
-      
-    const addItem = (e) => {
-        e.preventDefault();
-    
-        dispatch({
-          type: 'CREATE_AIRLINE',
-          payload: item
-        })
-        setItem('')
-      }
+  const [item, setItem] = useState("");
 
-    return (
-        <div>
-            <h3>This is the form</h3>
+  const addItem = (e) => {
+    e.preventDefault();
 
-            <form onSubmit={addItem}>
-        <input 
+    dispatch({
+      type: "CREATE_AIRLINE",
+      payload: item,
+    });
+    setItem("");
+  };
+
+  return (
+    <div>
+      <h3>This is the form</h3>
+
+      <form onSubmit={addItem}>
+        <input
           value={item}
           onChange={(e) => setItem(e.target.value)}
-          placeholder='Todo Name'
+          placeholder="Todo Name"
         />
-      <button>Add Todo</button>
+        <button>Add Todo</button>
       </form>
-
-        </div>
-    );
-}
-
+    </div>
+  );
+};
 
 export default TodoForm;
