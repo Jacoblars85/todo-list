@@ -12,6 +12,8 @@ function TodoList() {
     return (
         <div>
             <h3>This is the todo list</h3>
+
+            <p>this is the todo</p>
         </div>
     );
 }
