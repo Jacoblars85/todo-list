@@ -24,7 +24,7 @@ const TodoForm = () => {
         <input
           value={item}
           onChange={(e) => setItem(e.target.value)}
-          placeholder="Todo Name"
+          placeholder="Todo Item"
         />
         <button>Add Todo</button>
       </form>
