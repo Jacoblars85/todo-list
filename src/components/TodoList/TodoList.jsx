@@ -16,7 +16,7 @@ function TodoList() {
         <div>
             <h3>This is the todo list</h3>
 
-            <p></p>
+            <p>{todoList}</p>
         </div>
     );
 }
