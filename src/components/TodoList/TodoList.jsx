@@ -8,9 +8,8 @@ function TodoList() {
     const todoList = useSelector((store) => store.todoList);
 
     useEffect(() => {
-
-    }, []); 
-
+        dispatch({ type: "SAGA_FETCH_TODO_LIST" });
+      }, []); 
 
     return (
         <div>
