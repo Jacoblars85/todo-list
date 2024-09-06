@@ -5,7 +5,7 @@ import { useDispatch, useSelector} from 'react-redux';
 function TodoList() {
     const dispatch = useDispatch();
 
-    const todoList = useSelector((store) => store.todoList);
+    const todoList = useSelector((store) => store.todoReducer.todoList);
 
     useEffect(() => {
         dispatch({ type: "SAGA_FETCH_TODO_LIST" });
