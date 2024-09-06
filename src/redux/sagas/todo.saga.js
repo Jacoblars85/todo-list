@@ -5,7 +5,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 function* fetchTodoList() {
   // console.log('action.payload', action.payload);
   try {
-    const todoListResponse = yield axios.get(`/api/todo`);
+    const todoListResponse = yield axios.get(`/api/todo/list`);
     yield put({
       type: 'SET_TODO_LIST',
       payload: todoListResponse.data
