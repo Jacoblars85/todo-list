@@ -3,8 +3,20 @@ const pool = require('../modules/pool');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/list', (req, res) => {
 
+//     const query = `
+
+//   `;
+
+    pool.query(query)
+        .then(result => {
+            res.send(['poo', 'poop', 'oop', 'op', 'po']);
+        })
+        .catch(err => {
+            console.log('ERROR: Get todo list', err);
+            res.sendStatus(500)
+        })
 });
 
 router.get('/', (req, res) => {
