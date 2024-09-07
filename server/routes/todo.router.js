@@ -4,6 +4,8 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/list', (req, res) => {
+    console.log('hello world');
+    
 
 //     const query = `
 
