@@ -7,13 +7,13 @@ router.get('/list', (req, res) => {
     console.log('hello world');
     
 
-//     const query = `
-
-//   `;
+    const query = `
+    
+    `;
 
     pool.query(query)
         .then(result => {
-            res.send(['poo', 'poop', 'oop', 'op', 'po']);
+            res.send(result.rows);
         })
         .catch(err => {
             console.log('ERROR: Get todo list', err);
