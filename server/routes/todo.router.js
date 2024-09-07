@@ -8,7 +8,7 @@ router.get('/list', (req, res) => {
     
 
     const query = `
-    
+    SELECT * FROM "todoList";
     `;
 
     pool.query(query)
