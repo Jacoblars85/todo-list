@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-const todoList = (state = ['pooooo'], action) => {
+const todoList = (state = [{name: 'pooooo', is_complete: false}], action) => {
   switch (action.type) {
     case 'SET_TODO_LIST':
       return action.payload;
