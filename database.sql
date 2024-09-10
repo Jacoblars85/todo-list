@@ -1,19 +1,14 @@
-CREATE DATABASE "garden";
+CREATE DATABASE "todo_list";
 
-CREATE TABLE "plants" (
+CREATE TABLE "todo_list" (
     "id" SERIAL PRIMARY KEY,
     "name" VARCHAR (100) NOT NULL,
-    "kingdom" VARCHAR (100),
-    "clade" VARCHAR (100),
-    "order" VARCHAR (100),
-    "family" VARCHAR (100),
-    "subfamily" VARCHAR (100),
-    "genus" VARCHAR (100)
+    "is_complete" BOOLEAN DEFAULT FALSE
 );
 
-INSERT INTO "plants"
-  ("name", "kingdom", "clade", "order", "family", "subfamily", "genus")
+INSERT INTO "todo_list"
+  ("name", "is_complete")
   VALUES 
-  ('Rose', 'Plantae', 'Angiosperms', 'Rosales', 'Rosaceae', 'Rosoideae', 'Rosa'),
-  ('Tulip', 'Plantae', 'Angiosperms', 'Liliales', 'Liliaceae', 'Lilieae', 'Tulipa'),
-  ('Oak', 'Plantae', 'Angiosperms', 'Fagales', 'Fagaceae', NULL, 'Quercus');
+  ('trash', FALSE),
+  ('sleep', FALSE),
+  ('nap', FALSE);
