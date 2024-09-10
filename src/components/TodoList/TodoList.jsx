@@ -19,8 +19,10 @@ function TodoList() {
       {todoList.map((todo) => {
         return (
           <div key={todo.id}>
-            <p>{todo.name}</p>
-            <p>{todo.is_complete}</p>
+            <p>Task: {todo.name}</p>
+            <p>Finished: {todo.is_complete}</p>
+            <button>complete</button>
+            <button>delete</button>
           </div>
         );
       })}
