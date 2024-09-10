@@ -4,7 +4,7 @@ The saga continues with an epic garden of epic-ness!
 
 ## Create Database and Table
 
-Create a new database called `garden` and run the SQL in the `database.sql` file.
+Create a new database called `todo_list` and run the SQL in the `database.sql` file.
 
 ## Development Setup Instructions
 
