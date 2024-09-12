@@ -12,6 +12,13 @@ function TodoList() {
 
   console.log("todoList", todoList);
 
+  const deleteTodo = () => {
+    dispatch({
+        type: "SAGA_DELETE_TODO",
+        payload: character.id,
+      });
+  };
+
   return (
     <div>
       <h3>This is the todo list</h3>
@@ -22,7 +29,7 @@ function TodoList() {
             <p>Task: {todo.name}</p>
             <p>Finished: {todo.is_complete ? "complete" : "not complete"}</p>
             {todo.is_complete ? "completed" : <button>complete</button>}
-            <button>delete</button>
+            <button onClick={deleteTodo}>delete</button>
           </div>
         );
       })}
