@@ -15,19 +15,19 @@ function TodoList() {
   const finishTodo = () => {
     console.log('finishing');
     
-    dispatch({
-        type: "SAGA_FINISH_TODO",
-        payload: character.id,
-      });
+    // dispatch({
+    //     type: "SAGA_FINISH_TODO",
+    //     payload: character.id,
+    //   });
   };
 
   const deleteTodo = () => {
     console.log('deleting');
     
-    dispatch({
-        type: "SAGA_DELETE_TODO",
-        payload: character.id,
-      });
+    // dispatch({
+    //     type: "SAGA_DELETE_TODO",
+    //     payload: character.id,
+    //   });
   };
 
   return (
