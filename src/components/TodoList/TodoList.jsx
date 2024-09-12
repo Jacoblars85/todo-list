@@ -20,8 +20,8 @@ function TodoList() {
         return (
           <div key={todo.id}>
             <p>Task: {todo.name}</p>
-            <p>Finished: {todo.is_complete ? "complete" : "not complete"}</p>
-            <button>complete</button>
+            <p>Finished: {todo.is_complete ? "completed" : "not complete"}</p>
+            {todo.is_complete ? "completed" : <button>complete</button>}
             <button>delete</button>
           </div>
         );
