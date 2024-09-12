@@ -12,7 +12,18 @@ function TodoList() {
 
   console.log("todoList", todoList);
 
+  const finishTodo = () => {
+    console.log('finishing');
+    
+    dispatch({
+        type: "SAGA_FINISH_TODO",
+        payload: character.id,
+      });
+  };
+
   const deleteTodo = () => {
+    console.log('deleting');
+    
     dispatch({
         type: "SAGA_DELETE_TODO",
         payload: character.id,
@@ -28,7 +39,7 @@ function TodoList() {
           <div key={todo.id}>
             <p>Task: {todo.name}</p>
             <p>Finished: {todo.is_complete ? "complete" : "not complete"}</p>
-            {todo.is_complete ? "completed" : <button>complete</button>}
+            {todo.is_complete ? "completed" : <button onClick={finishTodo}>complete</button>}
             <button onClick={deleteTodo}>delete</button>
           </div>
         );
