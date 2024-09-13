@@ -18,7 +18,7 @@ function* fetchTodoList() {
 function* postNewTodo(action) {
     // console.log('action', action.payloaad);
     try {
-      const postTodoResponse = yield axios({
+      const response = yield axios({
         method: 'POST',
         url: '/api/todo/new',
         data: action.payload
@@ -31,9 +31,26 @@ function* postNewTodo(action) {
     }
   }
 
+  function* finishTodo(action) {
+    // console.log('action.payload', action.payload);
+    try {
+      const response = yield axios({
+        method: 'PUT',
+        url: `/api/todo/finish`,
+        data: action.payload
+      })
+      yield put({
+        type: 'SAGA_FETCH_TODO_LIST',
+      })
+    } catch (error) {
+      console.log('Unable to finish todo to server', error);
+    }
+  }
+
 function* characterSaga() {
   yield takeLatest('SAGA_FETCH_TODO_LIST', fetchTodoList);
   yield takeLatest('SAGA_POST_NEW_TODO', postNewTodo);
+  yield takeLatest('SAGA_FINISH_TODO', finishTodo);
 
 }
 
