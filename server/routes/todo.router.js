@@ -47,7 +47,7 @@ const sqlText = `
         WHERE "id" = $1;
         `;
 
-        const sqlValues = [req.body.TodoId];
+        const sqlValues = [req.body.todoId];
 
 pool
     .query(sqlText, sqlValues)
@@ -60,8 +60,25 @@ pool
     });
 });
 
-router.delete('/', (req, res) => {
+router.delete("/delete", (req, res) => {
 
+    const sqlText = `
+    DELETE FROM "todo_list"
+        WHERE "id" = $1;
+        `
+
+    const sqlValues = [req.body.todoId];
+
+pool
+    .query(sqlText, sqlValues)
+    .then((result) => {
+        res.sendStatus(201);
+    })
+    .catch((err) => {
+        console.log("Error in todo.router DELETE, deleting todo", err);
+        res.sendStatus(500);
+    });
 });
+
 
 module.exports = router;
