@@ -19,10 +19,6 @@ router.get('/list', (req, res) => {
         })
 });
 
-router.get('/', (req, res) => {
-
-});
-
 router.post('/new', (req, res) => {
 // console.log('req.body', req.body);
 
