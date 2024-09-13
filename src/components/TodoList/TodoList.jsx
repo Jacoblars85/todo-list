@@ -13,24 +13,6 @@ function TodoList() {
 
   console.log("todoList", todoList);
 
-  const finishTodo = () => {
-    console.log('finishing');
-    
-    // dispatch({
-    //     type: "SAGA_FINISH_TODO",
-    //     payload: character.id,
-    //   });
-  };
-
-  const deleteTodo = () => {
-    console.log('deleting');
-    
-    // dispatch({
-    //     type: "SAGA_DELETE_TODO",
-    //     payload: character.id,
-    //   });
-  };
-
   return (
     <div>
       <h3>This is the todo list</h3>
