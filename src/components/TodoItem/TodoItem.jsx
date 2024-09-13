@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-function TodoItem() {
+function TodoItem({ todo }) {
   const dispatch = useDispatch();
 
   const todoList = useSelector((store) => store.todoReducer.todoList);
