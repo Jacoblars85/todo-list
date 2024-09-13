@@ -43,8 +43,25 @@ pool.query(sqlText, sqlValues)
     })
 });
 
-router.put('/', (req, res) => {
+router.put("/finish", (req, res) => {
 
+const sqlText = `
+    UPDATE "todo_list"
+        SET "is_complete" = TRUE
+        WHERE "id" = $1;
+        `;
+
+        const sqlValues = [req.body.TodoId];
+
+pool
+    .query(sqlText, sqlValues)
+    .then((result) => {
+        res.sendStatus(201);
+    })
+    .catch((err) => {
+        console.log("Error in todo.router /finish PUT,", err);
+        res.sendStatus(500);
+    });
 });
 
 router.delete('/', (req, res) => {
