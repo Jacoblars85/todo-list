@@ -6,12 +6,6 @@ function TodoItem({ todo }) {
 
   const todoList = useSelector((store) => store.todoReducer.todoList);
 
-  // useEffect(() => {
-  //     dispatch({ type: "SAGA_FETCH_TODO_LIST" });
-  //   }, []);
-
-  console.log("todoList", todoList);
-
   const finishTodo = () => {
     console.log('finishing');
     
