@@ -1,0 +1,43 @@
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+function TodoItem() {
+  const dispatch = useDispatch();
+
+  const todoList = useSelector((store) => store.todoReducer.todoList);
+
+  // useEffect(() => {
+  //     dispatch({ type: "SAGA_FETCH_TODO_LIST" });
+  //   }, []);
+
+  console.log("todoList", todoList);
+
+  const finishTodo = () => {
+    console.log('finishing');
+    
+    // dispatch({
+    //     type: "SAGA_FINISH_TODO",
+    //     payload: character.id,
+    //   });
+  };
+
+  const deleteTodo = () => {
+    console.log('deleting');
+    
+    // dispatch({
+    //     type: "SAGA_DELETE_TODO",
+    //     payload: character.id,
+    //   });
+  };
+
+  return (
+    <div>
+            <p>Task: {todo.name}</p>
+            <p>Finished: {todo.is_complete ? "complete" : "not complete"}</p>
+            {todo.is_complete ? "completed" : <button onClick={finishTodo}>complete</button>}
+            <button onClick={deleteTodo}>delete</button>
+    </div>
+  );
+}
+
+export default TodoItem;
