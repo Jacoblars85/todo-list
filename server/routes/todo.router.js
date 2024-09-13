@@ -19,6 +19,7 @@ router.get('/list', (req, res) => {
         })
 });
 
+
 router.post('/new', (req, res) => {
 // console.log('req.body', req.body);
 
@@ -38,6 +39,7 @@ pool.query(sqlText, sqlValues)
         res.sendStatus(500)
     })
 });
+
 
 router.put("/finish", (req, res) => {
 
@@ -59,6 +61,7 @@ pool
         res.sendStatus(500);
     });
 });
+
 
 router.delete("/delete", (req, res) => {
 
