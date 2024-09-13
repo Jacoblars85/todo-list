@@ -23,8 +23,24 @@ router.get('/', (req, res) => {
 
 });
 
-router.post('/', (req, res) => {
+router.post('/new', (req, res) => {
+// console.log('req.body', req.body);
 
+const sqlText = `
+        INSERT INTO "todo_list" 
+        ("name")
+        VALUES
+        ($1);
+    `;
+const sqlValues = [req.body.newTodo]
+
+pool.query(sqlText, sqlValues)
+    .then(result => {
+        res.sendStatus(201);
+    }).catch(err => {
+        console.log('err in sending new todo POST route', err);
+        res.sendStatus(500)
+    })
 });
 
 router.put('/', (req, res) => {
