@@ -47,10 +47,27 @@ function* postNewTodo(action) {
     }
   }
 
+  function* deleteTodo(action) {
+    // console.log('action.payload', action.payload);
+    try {
+      const response = yield axios({
+        method: 'DELETE',
+        url: `/api/todo/delete`,
+        data: action.payload
+      })
+      yield put({
+        type: 'SAGA_FETCH_TODO_LIST',
+      })
+    } catch (error) {
+      console.log('deleteTodo Unable to delete todo to server', error);
+    }
+  }
+
 function* characterSaga() {
   yield takeLatest('SAGA_FETCH_TODO_LIST', fetchTodoList);
   yield takeLatest('SAGA_POST_NEW_TODO', postNewTodo);
   yield takeLatest('SAGA_FINISH_TODO', finishTodo);
+  yield takeLatest('SAGA_DELETE_TODO', deleteTodo);
 
 }
 
