@@ -6,7 +6,7 @@ const TodoForm = () => {
 
   const [newTodo, setNewTodo] = useState("");
 
-  const addItem = (e) => {
+  const addNewTodo = (e) => {
     e.preventDefault();
 
     dispatch({
@@ -20,7 +20,7 @@ const TodoForm = () => {
     <div>
       <h3>This is the form</h3>
 
-      <form onSubmit={addItem}>
+      <form onSubmit={addNewTodo}>
         <input
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
