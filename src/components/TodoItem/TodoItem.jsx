@@ -9,19 +9,19 @@ function TodoItem({ todo }) {
   const finishTodo = () => {
     console.log("finishing");
 
-    dispatch({
-      type: "SAGA_FINISH_TODO",
-      payload: todo.id,
-    });
+    // dispatch({
+    //   type: "SAGA_FINISH_TODO",
+    //   payload: todo.id,
+    // });
   };
 
   const deleteTodo = () => {
     console.log("deleting");
 
-    dispatch({
-      type: "SAGA_DELETE_TODO",
-      payload: todo.id,
-    });
+    // dispatch({
+    //   type: "SAGA_DELETE_TODO",
+    //   payload: todo.id,
+    // });
   };
 
   return (
