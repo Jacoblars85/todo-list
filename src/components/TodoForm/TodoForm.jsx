@@ -10,7 +10,7 @@ const TodoForm = () => {
     e.preventDefault();
 
     dispatch({
-      type: "CREATE_AIRLINE",
+      type: "SAGA_POST_NEW_TODO",
       payload: item,
     });
     setItem("");
