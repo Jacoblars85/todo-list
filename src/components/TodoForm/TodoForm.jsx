@@ -9,10 +9,13 @@ const TodoForm = () => {
   const addNewTodo = (e) => {
     e.preventDefault();
 
-    dispatch({
-      type: "SAGA_POST_NEW_TODO",
-      payload: newTodo,
-    });
+    console.log('newTodo', newTodo);
+    
+
+    // dispatch({
+    //   type: "SAGA_POST_NEW_TODO",
+    //   payload: newTodo,
+    // });
     setNewTodo("");
   };
 
