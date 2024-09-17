@@ -9,14 +9,14 @@ router.get('/list', (req, res) => {
     SELECT * FROM "todoList";
     `;
 
-    pool.query(query)
-        .then(result => {
-            res.send(result.rows);
-        })
-        .catch(err => {
-            console.log('ERROR: Get todo list', err);
-            res.sendStatus(500)
-        })
+pool.query(query)
+    .then(result => {
+        res.send(result.rows);
+    })
+    .catch(err => {
+        console.log('ERROR: Get todo list', err);
+        res.sendStatus(500)
+    })
 });
 
 
@@ -49,10 +49,9 @@ const sqlText = `
         WHERE "id" = $1;
         `;
 
-        const sqlValues = [req.body.todoId];
+    const sqlValues = [req.body.todoId];
 
-pool
-    .query(sqlText, sqlValues)
+pool.query(sqlText, sqlValues)
     .then((result) => {
         res.sendStatus(201);
     })
@@ -72,8 +71,7 @@ router.delete("/delete", (req, res) => {
 
     const sqlValues = [req.body.todoId];
 
-pool
-    .query(sqlText, sqlValues)
+pool.query(sqlText, sqlValues)
     .then((result) => {
         res.sendStatus(201);
     })
