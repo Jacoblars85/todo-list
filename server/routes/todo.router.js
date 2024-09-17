@@ -21,7 +21,6 @@ pool.query(query)
 
 
 router.post('/new', (req, res) => {
-// console.log('req.body', req.body);
 
 const sqlText = `
         INSERT INTO "todo_list" 
