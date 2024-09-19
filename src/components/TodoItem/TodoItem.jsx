@@ -25,7 +25,7 @@ function TodoItem({ todo }) {
   };
 
   return (
-    <div>
+    <div className="todoItem">
       <p>Task: {todo.name}</p>
       <p>Finished: {todo.is_complete ? "complete" : "not complete"}</p>
       {todo.is_complete ? (
