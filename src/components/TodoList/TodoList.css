@@ -1,3 +1,7 @@
 .todoItem {
     margin: 40px;
 }
+
+.todoItem p {
+    color: black;
+}
