@@ -1,5 +1,11 @@
 .todoItem {
     margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 
 .todoItem p {
