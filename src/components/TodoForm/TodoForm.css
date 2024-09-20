@@ -1,6 +1,23 @@
+.formBox {
+    /* margin: 40px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-top: 2px solid black; */
+}
+
 .todoForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: gray;
     border: 2px solid black;
-    height: 15%;
-    width: 15%;
+    height: 150px;
+    width: 400px;
 }
