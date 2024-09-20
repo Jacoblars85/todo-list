@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/list', (req, res) => {
     
     const query = `
-    SELECT * FROM "todoList";
+    SELECT * FROM "todo_list";
     `;
 
 pool.query(query)
