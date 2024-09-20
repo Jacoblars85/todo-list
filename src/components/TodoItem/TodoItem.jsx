@@ -11,7 +11,7 @@ function TodoItem({ todo }) {
 
     dispatch({
       type: "SAGA_FINISH_TODO",
-      payload: todo.id,
+      payload: {todoId: todo.id}
     });
   };
 
@@ -20,7 +20,7 @@ function TodoItem({ todo }) {
 
     dispatch({
       type: "SAGA_DELETE_TODO",
-      payload: todo.id,
+      payload: {todoId: todo.id}
     });
   };
 
