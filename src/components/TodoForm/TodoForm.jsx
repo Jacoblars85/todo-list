@@ -23,7 +23,7 @@ const TodoForm = () => {
     <div>
       <h3>This is the form</h3>
 
-      <form onSubmit={addNewTodo}>
+      <form className="todoForm" onSubmit={addNewTodo}>
         <input
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
