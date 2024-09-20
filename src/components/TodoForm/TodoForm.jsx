@@ -12,10 +12,10 @@ const TodoForm = () => {
 
     console.log("newTodo", newTodo);
 
-    // dispatch({
-    //   type: "SAGA_POST_NEW_TODO",
-    //   payload: newTodo,
-    // });
+    dispatch({
+      type: "SAGA_POST_NEW_TODO",
+      payload: newTodo,
+    });
     setNewTodo("");
   };
 
