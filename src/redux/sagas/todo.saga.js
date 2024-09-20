@@ -16,12 +16,12 @@ function* fetchTodoList() {
 }
 
 function* postNewTodo(action) {
-    // console.log('action', action.payloaad);
+    console.log('action', action.payload);
     try {
       const response = yield axios({
         method: 'POST',
         url: '/api/todo/new',
-        data: action.payload
+        data: {newTodo: action.payload}
       })
       yield put({
         type: 'SAGA_FETCH_TODO_LIST',
