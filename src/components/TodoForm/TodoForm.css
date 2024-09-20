@@ -1,4 +1,6 @@
 .todoForm {
     background-color: gray;
     border: 2px solid black;
+    height: 15%;
+    width: 15%;
 }
