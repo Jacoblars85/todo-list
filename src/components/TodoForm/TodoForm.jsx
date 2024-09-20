@@ -20,7 +20,7 @@ const TodoForm = () => {
   };
 
   return (
-    <div>
+    <div className="formBox">
       <h3>This is the form</h3>
 
       <form className="todoForm" onSubmit={addNewTodo}>
