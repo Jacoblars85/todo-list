@@ -16,8 +16,6 @@ function TodoList() {
 
   return (
     <div>
-      <h3>This is the todo list</h3>
-
       {todoList.map((todo) => {
         return <TodoItem todo={todo} key={todo.id} />;
       })}
