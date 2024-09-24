@@ -12,8 +12,6 @@ function TodoList() {
       dispatch({ type: "SAGA_FETCH_TODO_LIST" });
     }, []);
 
-  console.log("todoList", todoList);
-
   return (
     <div>
       {todoList.map((todo) => {
