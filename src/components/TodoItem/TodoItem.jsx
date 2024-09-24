@@ -7,7 +7,6 @@ function TodoItem({ todo }) {
   const todoList = useSelector((store) => store.todoReducer.todoList);
 
   const finishTodo = () => {
-    console.log("finishing");
 
     dispatch({
       type: "SAGA_FINISH_TODO",
