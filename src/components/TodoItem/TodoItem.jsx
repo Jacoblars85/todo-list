@@ -15,7 +15,6 @@ function TodoItem({ todo }) {
   };
 
   const deleteTodo = () => {
-    console.log("deleting");
 
     dispatch({
       type: "SAGA_DELETE_TODO",
