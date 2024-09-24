@@ -16,7 +16,7 @@ function* fetchTodoList() {
 }
 
 function* postNewTodo(action) {
-    console.log('action', action.payload);
+    // console.log('action', action.payload);
     try {
       const response = yield axios({
         method: 'POST',
