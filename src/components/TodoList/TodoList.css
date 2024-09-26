@@ -12,4 +12,5 @@
 .todoItem p {
     color: black;
     font-size: larger;
+    margin: 2px;
 }
