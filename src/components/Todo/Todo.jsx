@@ -6,8 +6,6 @@ function Garden() {
 
   return(
     <div>
-      <h2>This is the todo list!</h2>
-
       <TodoForm />
       <TodoList />
     </div>
